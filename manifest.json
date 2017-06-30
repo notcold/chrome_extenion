@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Getting started example",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "cookies",
+    "tabs",
+    "*://*/*"
+  ],
+  "content_scripts": [{  //对页面内容进行操作的脚本
+          "matches": ["http://*/*","https://*/*"],  //满足什么条件执行该插件
+         "js": ["js/jquery.js", "js/js.js"],
+         "run_at": "document_end"  //在document加载时执行该脚本
+    }]
+}
