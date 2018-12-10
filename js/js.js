@@ -5,7 +5,7 @@
     //     });
     // }, 2000)
     console.log(window);
-    $.ajax({ method: 'get', url: '//datacollect.superboss.cc/userCoupon/queryCouponList.json?pageSize=100&pageNo=1&used=false&api_name=getUnusedList',success : function(json) {
+    $.ajax({ method: 'get', url: '',success : function(json) {
         console.log(json)
     }},)
 })($)
